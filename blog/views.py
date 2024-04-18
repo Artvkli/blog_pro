@@ -1,6 +1,8 @@
+
+
 from django.shortcuts import render
 from .models import Article
-
+from .models import Categories
 
 def blog_page(request):
     articles = Article.objects.all()
@@ -15,3 +17,12 @@ def post_details(request, slug):
 
 def side_bare(request):
     return  render(request,'blog/sidebare.html')
+
+
+def category_detail(request, pk=None):
+    category = Categories.objects.get(id =pk)
+    details = category.articles.all()
+    return render(request,'blog/', {'details': details})
+
+
+

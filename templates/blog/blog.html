@@ -179,7 +179,14 @@
 
                         <h3 class="sidebar-title">Categories</h3>
                         <div class="sidebar-item categories">
-
+                            <ul>
+                                <li><a href="#">General <span>(25)</span></a></li>
+                                <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                                <li><a href="#">Travel <span>(5)</span></a></li>
+                                <li><a href="#">Design <span>(22)</span></a></li>
+                                <li><a href="#">Creative <span>(8)</span></a></li>
+                                <li><a href="#">Educaion <span>(14)</span></a></li>
+                            </ul>
                         </div><!-- End sidebar categories-->
 
                         <h3 class="sidebar-title">Recent Posts</h3>
@@ -188,7 +195,7 @@
                             {% for item in recent_post %}
                                 <div class="post-item clearfix">
                                     <img src="{{ item.image.url }}" alt="">
-                                    <h4><a href="{{ item.get_absolute_url }}">{{ item.title}}</a></h4>
+                                    <h4><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h4>
                                     <time datetime="2020-01-01">{{ item.created }}</time>
                                 </div>
                             {% endfor %}
